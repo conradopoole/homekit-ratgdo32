@@ -35,21 +35,24 @@
 
 /********************************** PIN DEFINITIONS *****************************************/
 
-const gpio_num_t UART_TX_PIN = GPIO_NUM_17;
-const gpio_num_t UART_RX_PIN = GPIO_NUM_21;
-const gpio_num_t LED_BUILTIN = GPIO_NUM_2;
-const gpio_num_t INPUT_OBST_PIN = GPIO_NUM_4;
-const gpio_num_t STATUS_DOOR_PIN = GPIO_NUM_26;       // output door status, HIGH for open, LOW for closed
-const gpio_num_t STATUS_OBST_PIN = GPIO_NUM_25;       // output for obstruction status, HIGH for obstructed, LOW for clear
-const gpio_num_t DRY_CONTACT_OPEN_PIN = GPIO_NUM_13;  // dry contact for opening door
-const gpio_num_t DRY_CONTACT_CLOSE_PIN = GPIO_NUM_14; // dry contact for closing door
+const gpio_num_t UART_TX_PIN = GPIO_NUM_2;
+const gpio_num_t UART_RX_PIN = GPIO_NUM_3;
+//const gpio_num_t LED_BUILTIN = GPIO_NUM_8;
+const gpio_num_t INPUT_OBST_PIN = GPIO_NUM_14;
 
-const gpio_num_t BEEPER_PIN = GPIO_NUM_33;
-const gpio_num_t LASER_PIN = GPIO_NUM_23;
-const gpio_num_t SENSOR_PIN = GPIO_NUM_34;
+// I DONT USE THIS
+////////////////
+const gpio_num_t STATUS_DOOR_PIN = GPIO_NUM_15; //GPIO_NUM_26;       // output door status, HIGH for open, LOW for closed
+const gpio_num_t STATUS_OBST_PIN = GPIO_NUM_16; //GPIO_NUM_25;       // output for obstruction status, HIGH for obstructed, LOW for clear
+const gpio_num_t DRY_CONTACT_OPEN_PIN = GPIO_NUM_17; //GPIO_NUM_13;  // dry contact for opening door
+const gpio_num_t DRY_CONTACT_CLOSE_PIN = GPIO_NUM_18; //GPIO_NUM_14; // dry contact for closing door
 
-const gpio_num_t SHUTDOWN_PIN = GPIO_NUM_32;
+const gpio_num_t BEEPER_PIN = GPIO_NUM_19; //GPIO_NUM_20;
+const gpio_num_t LASER_PIN = GPIO_NUM_20; //GPIO_NUM_21;
+const gpio_num_t SENSOR_PIN = GPIO_NUM_21; //GPIO_NUM_22;
 
+const gpio_num_t SHUTDOWN_PIN = GPIO_NUM_22; //GPIO_NUM_23;
+////////////////
 extern uint32_t free_heap;
 extern uint32_t min_heap;
 
