@@ -256,12 +256,14 @@ void LOG::printCrashLog(Print &outputDev)
                 else
                     outputDev.print("addr2line -p -f -C -e firmware.elf \\\n");
                 outputDev.print(" -a ");
+                #if CONFIG_IDF_TARGET_ARCH_XTENSA
                 for (int i = 0; i < summary->exc_bt_info.depth; i++)
                 {
                     outputDev.printf("0x%08lX ", summary->exc_bt_info.bt[i]);
                     if (((i + 1) % 6) == 0 && ((i + 1) < summary->exc_bt_info.depth))
                         outputDev.print("\\\n    ");
                 }
+                #endif
                 outputDev.print("\n\n");
                 outputDev.print("Make sure that the ELF file matches the binary that crashed.\n");
             }
